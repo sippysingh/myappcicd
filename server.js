@@ -34,6 +34,11 @@ db.mongoose
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to bezkoder application." });
 });
+
+app.get("/home", (req, res) => {
+  res.json({ message: "Hi from Express app after cicd implementation" });
+});
+
 require("./app/routes/tutorial.routes")(app);
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
